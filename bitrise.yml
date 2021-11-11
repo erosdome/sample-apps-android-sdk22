@@ -41,7 +41,7 @@ workflows:
         - is_compress: 'false'
     meta:
       bitrise.io:
-        stack: osx-xcode-13.2.x
+        stack: osx-xcode-edge
 meta:
   bitrise.io:
-    stack: osx-vs4mac-stable
+    stack: osx-xcode-13.2.x
