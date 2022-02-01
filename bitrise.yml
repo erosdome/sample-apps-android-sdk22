@@ -9,7 +9,7 @@ trigger_map:
   workflow: primary
 - pull_request_source_branch: "*"
   workflow: primary
-workflows:
+:  workflows:
   deploy:
     steps:
     - activate-ssh-key@4:
