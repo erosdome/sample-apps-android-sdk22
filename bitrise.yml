@@ -62,6 +62,3 @@ app:
   - opts:
       is_expand: false
     BITRISE_TEAM: 72SA8V3WYL
-meta:
-  bitrise.io:
-    stack: linux-docker-androide
