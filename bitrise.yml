@@ -1,13 +1,13 @@
 ---
 format_version: '8'
-default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
 project_type: ios
 trigger_map:
-- push_branch: "master"
+- push_branch: master
   workflow: deploy
-- push_branch: "*"
+- push_branch: '*'
   workflow: primary
-- pull_request_source_branch: "*"
+- pull_request_source_branch: '*'
   workflow: primary
 workflows:
   deploy:
@@ -19,14 +19,14 @@ workflows:
     - certificate-and-profile-installer@1: {}
     - xcode-archive@3:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
-        - force_code_sign_identity: "$BITRISE_CODE_SIGNING_IDENTITY"
-        - force_provisioning_profile: "$BITRISE_PROFILE_ID"
+        - project_path: $BITRISE_PROJECT_PATH
+        - scheme: $BITRISE_SCHEME
+        - force_code_sign_identity: $BITRISE_CODE_SIGNING_IDENTITY
+        - force_provisioning_profile: $BITRISE_PROFILE_ID
         - compile_bitcode: 'no'
         - upload_bitcode: 'no'
-        - team_id: "$BITRISE_TEAM"
-        - export_method: "$BITRISE_EXPORT_METHOD"
+        - team_id: $BITRISE_TEAM
+        - export_method: $BITRISE_EXPORT_METHOD
     - deploy-to-bitrise-io@1: {}
     - cache-push@2: {}
   primary:
@@ -38,8 +38,8 @@ workflows:
     - certificate-and-profile-installer@1: {}
     - xcode-test@2:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
+        - project_path: $BITRISE_PROJECT_PATH
+        - scheme: $BITRISE_SCHEME
     - deploy-to-bitrise-io@1: {}
     - cache-push@2: {}
 app:
@@ -62,3 +62,6 @@ app:
   - opts:
       is_expand: false
     BITRISE_TEAM: 72SA8V3WYL
+meta:
+  bitrise.io:
+    stack: osx-xcode-10.3.x
