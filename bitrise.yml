@@ -64,4 +64,4 @@ app:
     BITRISE_TEAM: 72SA8V3WYL
 meta:
   bitrise.io:
-    stack: osx-xcode-9.4.x
+    stack: osx-xcode-9.3.x
