@@ -8,7 +8,19 @@ trigger_map:
 workflows:
   tinker:
     steps:
-    - script: {}
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -ex
+
+            echo $a
+            echo $b
+            echo $c
+            echo $FOO
+            echo $BAR
+            echo $SUBYML_KEY
+        title: Sub - Check env var availability in original & sub
 app:
   envs:
   - SUBYML_KEY: SUBYML_VALUE
