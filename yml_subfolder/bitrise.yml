@@ -4,9 +4,9 @@ default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
 project_type: ios
 trigger_map:
 - push_branch: '*'
-  workflow: tinker
+  workflow: tinkering
 workflows:
-  tinker:
+  tinkering:
     steps:
     - script@1:
         inputs:
