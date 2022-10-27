@@ -23,8 +23,8 @@ workflows:
         title: Sub - Check env var availability in original & sub
 app:
   envs:
-  - SUBYML_KEY: SUBYML_VALUE
-  - BAR: SUBYML_TOOK_THIS_VALUE
+  - SUBYML_KEY: a: $a, b: $b, c: $c, FOO: $FOO, BAR: $BAR SUBYML_VALUE
+  - BAR: a: $a, b: $b, c: $c, FOO: $FOO, BAR: $BAR SUBYML_TOOK_THIS_VALUE
 meta:
   bitrise.io:
     stack: osx-xcode-10.3.x
