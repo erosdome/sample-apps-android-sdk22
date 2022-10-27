@@ -1,0 +1,17 @@
+---
+format_version: '8'
+default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
+project_type: ios
+trigger_map:
+- push_branch: '*'
+  workflow: sub
+workflows:
+  sub:
+    steps:
+    - script: {}
+app:
+  envs:
+  - SUBYML_KEY: SUBYML_VALUE
+meta:
+  bitrise.io:
+    stack: osx-xcode-10.3.x
