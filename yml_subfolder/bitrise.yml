@@ -12,6 +12,7 @@ workflows:
 app:
   envs:
   - SUBYML_KEY: SUBYML_VALUE
+  - BAR: SUBYML_TOOK_THIS_VALUE
 meta:
   bitrise.io:
     stack: osx-xcode-10.3.x
