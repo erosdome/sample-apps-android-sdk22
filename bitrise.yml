@@ -64,4 +64,4 @@ app:
     BITRISE_TEAM: 72SA8V3WYL
 meta:
   bitrise.io:
-    stack: osx-xcode-10.3.x
+    stack: jibberish
