@@ -64,5 +64,5 @@ app:
     BITRISE_TEAM: 72SA8V3WYL
 meta:
   bitrise.io:
-    stack: linux-docker-android-20.04
-    machine_type_id: standard
+    stack: linux-docker-android-22.04
+    machine_type_id: g2.linux.medium
